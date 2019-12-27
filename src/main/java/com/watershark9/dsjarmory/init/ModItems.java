@@ -11,7 +11,7 @@ public class ModItems {
 
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
-	public static final Item TIDAL_SURGE = new ItemBase("tidal_surge");
+	public static final Item TIDAL_RIFT = new ItemBase("tidal_rift");
 	
 	
 }
