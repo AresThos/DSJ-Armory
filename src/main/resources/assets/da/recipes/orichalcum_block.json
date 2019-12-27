@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "da:orichalcum_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "da:orichalcum_block",
+        "count": 1
+    }
+}
