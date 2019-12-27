@@ -1,7 +1,7 @@
 {
    "parent": "item/generated",
    "textures": {
-       "layer0": "da:items/tidalrift"
+       "layer0": "da:items/xentar2"
    },
     "display": {
         "ground": {

@@ -12,6 +12,8 @@ public class ModItems {
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
 	public static final Item TIDAL_RIFT = new ItemBase("tidal_rift");
+	public static final Item XENTAR = new ItemBase("xentar");
+	public static final Item DEMON_BLADE = new ItemBase("demon_blade");
 	
 	
 }
