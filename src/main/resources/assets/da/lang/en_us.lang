@@ -1,4 +1,10 @@
-//Items
+//Weapons
 item.tidal_rift.name=Tidal Rift
 item.Xentar.name=Xentar
 item.demon_blade.name=Demon Blade
+
+//Items
+item.orichalcum_ingot.name=Orichalcum Ingot
+
+//Blocks
+tile.orichalcum_block.name=Block of Orichalcum
