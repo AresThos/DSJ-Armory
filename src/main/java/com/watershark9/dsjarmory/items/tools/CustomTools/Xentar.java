@@ -17,17 +17,21 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
-public class JanembaSword extends ItemSword implements IHasModel {
+public class Xentar extends ItemSword implements IHasModel {
 	
 	// Global Variables
 	private double attack, speed; // Default attack is 1; Default speed is 4
@@ -42,7 +46,7 @@ public class JanembaSword extends ItemSword implements IHasModel {
 	
 	// Constructor
 
-	public JanembaSword(String name, ToolMaterial material, double at, double sp) {
+	public Xentar(String name, ToolMaterial material, double at, double sp) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
@@ -56,18 +60,22 @@ public class JanembaSword extends ItemSword implements IHasModel {
 	
 	// Custom Stuff
 	
-	private void dimentionalSlash(World world, EntityPlayer play, EnumHand hand) {
-		
+	private void chargeAttack(EntityPlayer play, EnumHand hand, World world) {
 		if ( play.getCooledAttackStrength(0) == 1 ) {
+			
 			play.resetCooldown();
 			play.swingArm(hand);
 			
-			EntityEnderPearl fireb = new EntityEnderPearl( world,play );
-			double accel = 1.25;
-			fireb.motionX = play.getLookVec().x * accel;
-			fireb.motionY = play.getLookVec().y * accel;
-			fireb.motionZ = play.getLookVec().z * accel;
-			
+			Vec3d lookaim = play.getLookVec();
+			EntityLargeFireball fireb = new EntityLargeFireball(world,play,1,1,1);
+
+			double multiplyaim = 1.5D;
+			double accelaim = 0.1;
+
+			fireb.setPosition( (play.posX + lookaim.x * multiplyaim), ( (play.posY + 1) + lookaim.y * multiplyaim), (play.posZ + lookaim.z * multiplyaim) );
+			fireb.accelerationX = lookaim.x * accelaim;
+			fireb.accelerationY = lookaim.y * accelaim;
+			fireb.accelerationZ = lookaim.z * accelaim;
 			world.spawnEntity(fireb);
 			
 			
@@ -81,11 +89,10 @@ public class JanembaSword extends ItemSword implements IHasModel {
 	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
-		ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
 		// Call Function:
-		this.dimentionalSlash(world, entity, hand);
-		//
-		return ar;
+		chargeAttack(entity,hand,world);
+		//Default Stuff
+		return super.onItemRightClick(world, entity, hand);
 	}
 	
 	// ItemTool stuff
