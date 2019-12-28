@@ -42,7 +42,7 @@ public class TidalRift extends ItemSword implements IHasModel {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(CreativeTabs.MATERIALS);
+		setCreativeTab(CreativeTabs.COMBAT);
 		
 		ModItems.ITEMS.add(this);
 		
