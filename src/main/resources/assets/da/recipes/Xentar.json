@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "XID",
+        "IOI",
+        "SIX"
+    ],
+    
+    "key":
+    {
+        "O":
+        {
+            "item": "da:orichalcum_ingot"
+        },
+        "I": {
+            "item": "minecraft:gold_block"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        },
+        "D": {
+            "item": "minecraft:diamond_block"
+        },
+        "X": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "da:xentar",
+        "count": 1
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "  I",
+        " O ",
+        "S  "
+    ],
+    
+    "key":
+    {
+        "O":
+        {
+            "item": "da:orichalcum_ingot"
+        },
+        "I": {
+            "item": "minecraft:nether_bricks"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "da:tidal_rift",
+        "count": 1
+    }
+}

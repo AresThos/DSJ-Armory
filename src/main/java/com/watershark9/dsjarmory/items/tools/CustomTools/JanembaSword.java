@@ -56,27 +56,22 @@ public class JanembaSword extends ItemSword implements IHasModel {
 	private int cooldown = 0;
 	
 	private void dimentionalSlash(World world, EntityPlayer play) {
-		if (cooldown <= 0) {
+		
+		EntityEnderPearl fireb = new EntityEnderPearl( world,play );
+		double accel = 1.25;
+		fireb.motionX = play.getLookVec().x * accel;
+		fireb.motionY = play.getLookVec().y * accel;
+		fireb.motionZ = play.getLookVec().z * accel;
+		
+		world.spawnEntity(fireb);
 			
-			Vec3d aim = play.getLookVec();
-			EntityEnderPearl fireb = new EntityEnderPearl( world,play );
-			
-			double accel = 1.25;
-			fireb.motionX = aim.x * accel;
-			fireb.motionY = aim.y * accel;
-			fireb.motionZ = aim.z * accel;
-			world.spawnEntity( fireb );
-			
-			cooldown = 100;
-		}
+		cooldown = 100;
 	}
 	
 	// Custom Calls
 	
-	@Override
-	public void onUpdate(ItemStack itemstack, World world, Entity entity, int i, boolean B) {
-		if(cooldown > 0) cooldown--;
-	}
+	
+
 	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
