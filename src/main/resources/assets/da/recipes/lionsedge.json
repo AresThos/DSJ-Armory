@@ -1,0 +1,22 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#iE",
+        "i  "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:bow"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "E": {
+            "item": "da:orichalcum_ingot"
+        }
+    },
+    "result": {
+        "item": "da:lion_edge",
+        "count": 1
+    }
+}

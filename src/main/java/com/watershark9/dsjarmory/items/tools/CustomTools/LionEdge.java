@@ -9,14 +9,13 @@ import com.watershark9.dsjarmory.Main;
 import com.watershark9.dsjarmory.init.ModItems;
 import com.watershark9.dsjarmory.util.IHasModel;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
-import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,10 +23,14 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
-public class JanembaSword extends ItemSword implements IHasModel {
+import net.minecraft.entity.projectile.EntityTippedArrow;
+import net.minecraft.entity.projectile.EntityArrow;
+import net.minecraft.entity.projectile.EntityLargeFireball;
+
+
+public class LionEdge extends ItemSword implements IHasModel {
 	
 	// Global Variables
 	private double attack, speed; // Default attack is 1; Default speed is 4
@@ -42,7 +45,7 @@ public class JanembaSword extends ItemSword implements IHasModel {
 	
 	// Constructor
 
-	public JanembaSword(String name, ToolMaterial material, double at, double sp) {
+	public LionEdge(String name, ToolMaterial material, double at, double sp) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
@@ -56,18 +59,22 @@ public class JanembaSword extends ItemSword implements IHasModel {
 	
 	// Custom Stuff
 	
-	private void dimentionalSlash(World world, EntityPlayer play, EnumHand hand) {
-		
-		if ( play.getCooledAttackStrength(0) == 1 && play.isSneaking() == true) {
+	private void shooting(World world, EntityPlayer play) {
+
+		if ( play.getCooledAttackStrength(0) == 1 ) {
+			
 			play.resetCooldown();
-			play.swingArm(hand);
 			
-			EntityEnderPearl fireb = new EntityEnderPearl( world,play );
-			double accel = 1.25;
-			fireb.motionX = play.getLookVec().x * accel;
-			fireb.motionY = play.getLookVec().y * accel;
-			fireb.motionZ = play.getLookVec().z * accel;
-			
+			Vec3d lookaim = play.getLookVec();
+			EntityTippedArrow fireb = new EntityTippedArrow(world); 
+
+			double multiplyaim = 1.5D;
+			double accelaim = 4;
+
+			fireb.setPosition( (play.posX + lookaim.x * multiplyaim), ( (play.posY + 1) + lookaim.y * multiplyaim), (play.posZ + lookaim.z * multiplyaim) );
+			fireb.motionX = lookaim.x * accelaim;
+			fireb.motionY = lookaim.y * accelaim;
+			fireb.motionZ = lookaim.z * accelaim;
 			world.spawnEntity(fireb);
 			
 			
@@ -76,14 +83,11 @@ public class JanembaSword extends ItemSword implements IHasModel {
 	
 	// Custom Calls
 	
-	
-
-	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
 		ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
 		// Call Function:
-		this.dimentionalSlash(world, entity, hand);
+		shooting(world, entity);
 		//
 		return ar;
 	}
