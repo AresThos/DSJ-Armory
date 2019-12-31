@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "L L",
+        "O O",
+        "S S"
+    ],
+    
+    "key":
+    {
+        "O":
+        {
+            "item": "da:orichalcum_ingot"
+        },
+        "L": {
+            "item": "minecraft:lava_bucket"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "da:golden_fire",
+        "count": 2
+    }
+}
