@@ -18,10 +18,12 @@ import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityLargeFireball;
+import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
@@ -31,7 +33,9 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
-public class Xentar extends ItemSword implements IHasModel {
+
+
+public class golden_fire extends ItemSword implements IHasModel {
 	
 	// Global Variables
 	private double attack, speed; // Default attack is 1; Default speed is 4
@@ -45,8 +49,10 @@ public class Xentar extends ItemSword implements IHasModel {
 	}
 	
 	// Constructor
+	
+	EntityPlayer player;
 
-	public Xentar(String name, ToolMaterial material, double at, double sp) {
+	public golden_fire(String name, ToolMaterial material, double at, double sp) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
@@ -60,24 +66,16 @@ public class Xentar extends ItemSword implements IHasModel {
 	
 	// Custom Stuff
 	
-	private void chargeAttack(EntityPlayer play, EnumHand hand, World world) {
-		if ( play.getCooledAttackStrength(0) == 1 ) {
+	public void buff(EntityPlayer play, EnumHand hand) {
+		if ( play.getHeldItemOffhand().getItem() == play.getHeldItemMainhand().getItem() ) {
+			int duration = 1600;
+			int boost = 3;
 			
-			play.resetCooldown();
-			play.swingArm(hand);
+			play.addPotionEffect(new PotionEffect(MobEffects.SPEED, duration, boost));
+			play.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, duration, boost));
+			play.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, duration, boost));
 
-			Vec3d lookaim = play.getLookVec();
-			EntityLargeFireball fireb = new EntityLargeFireball(world,play,1,1,1);
-
-			double multiplyaim = 1.5D;
-			double accelaim = 0.1;
-
-			fireb.setPosition( (play.posX + lookaim.x * multiplyaim), ( (play.posY + 1) + lookaim.y * multiplyaim), (play.posZ + lookaim.z * multiplyaim) );
-			fireb.accelerationX = lookaim.x * accelaim;
-			fireb.accelerationY = lookaim.y * accelaim;
-			fireb.accelerationZ = lookaim.z * accelaim;
-			world.spawnEntity(fireb);
-			
+			play.swingArm( hand );
 			
 		}
 	}
@@ -85,15 +83,15 @@ public class Xentar extends ItemSword implements IHasModel {
 	// Custom Calls
 	
 	
-
-	
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
-		// Call Function:
-		chargeAttack(entity,hand,world);
-		//Default Stuff
-		return super.onItemRightClick(world, entity, hand);
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+		
+		buff(playerIn, handIn);
+		
+		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
+	
+	
 	
 	// ItemTool stuff
 	
