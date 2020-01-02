@@ -77,6 +77,8 @@ public class bane_of_seux extends ItemSword implements IHasModel {
 		target.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, (duration * durationmulti), 3) );
 		target.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, (duration * durationmulti), 3) );
 		
+		target.addPotionEffect(new PotionEffect(MobEffects.WITHER, (duration * durationmulti), 3) );
+		
 	}
 	
 	// Custom Calls

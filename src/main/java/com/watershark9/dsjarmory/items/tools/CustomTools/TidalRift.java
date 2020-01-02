@@ -28,14 +28,6 @@ public class TidalRift extends ItemSword implements IHasModel {
 	// Global Variables
 	private double attack, speed; // Default attack is 1; Default speed is 4
 	
-	private void setAttack(double at) {
-		attack = at; // f(x)=1+(9*x)
-	}
-	
-	private void setSpeed(double sp) {
-		speed = sp; // f(x)=4+(2.4*(-x))
-	}
-	
 	// Constructor
 
 	public TidalRift(String name, ToolMaterial material, double at, double sp) {
@@ -46,16 +38,16 @@ public class TidalRift extends ItemSword implements IHasModel {
 		
 		ModItems.ITEMS.add(this);
 		
-		setAttack(at);
-		setSpeed(sp); 
+		attack = at; // f(x)=1+(9*x)
+		speed = sp;  // f(x)=4+(2.4*(-x))
 	}
 	
 	// Custom Stuff
 	
-	public static void riftSurf(EntityPlayer entity) {
-		if (entity.isInWater()){
+	public static void riftSurf(EntityPlayer entity, World place) {
+		if ( (entity.isInWater() || place.isRaining()) && entity.getCooledAttackStrength(0) == 1){
 			Vec3d lookaim = entity.getLookVec();
-			double speed = 1.25;
+			double speed = 1.50;
 			entity.setVelocity( (lookaim.x * speed), (lookaim.y * speed), (lookaim.z * speed));
 		}
 	}
@@ -66,7 +58,7 @@ public class TidalRift extends ItemSword implements IHasModel {
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
 		ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
 		// Call Function:
-		this.riftSurf(entity);
+		this.riftSurf(entity,world);
 		//
 		return ar;
 	}

@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "#F#",
+        "#G#",
+        "iEi"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone_block"
+        },
+        "F": {
+            "item": "minecraft:skull","data":0
+        },
+        "G": {
+            "item": "da:orichalcum_ingot"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "E": {
+            "item": "minecraft:emerald"
+        }
+    },
+    "result": {
+        "item": "da:baneofseux",
+        "count": 1
+    }
+}
