@@ -70,11 +70,16 @@ public class LionEdge extends ItemSword implements IHasModel {
 
 			double multiplyaim = 1.5D;
 			double accelaim = 4;
+			int knockback = 5;
 
 			fireb.setPosition( (play.posX + lookaim.x * multiplyaim), ( (play.posY + 1) + lookaim.y * multiplyaim), (play.posZ + lookaim.z * multiplyaim) );
 			fireb.motionX = lookaim.x * accelaim;
 			fireb.motionY = lookaim.y * accelaim;
 			fireb.motionZ = lookaim.z * accelaim;
+			
+			fireb.setDamage(attack);
+			fireb.setKnockbackStrength( knockback );
+			
 			world.spawnEntity(fireb);
 			
 			

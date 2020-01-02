@@ -74,7 +74,9 @@ public class golden_fire extends ItemSword implements IHasModel {
 			play.addPotionEffect(new PotionEffect(MobEffects.SPEED, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, duration, boost));
-
+			
+			
+			
 			play.swingArm( hand );
 			
 		}

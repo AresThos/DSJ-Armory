@@ -11,6 +11,7 @@ import com.watershark9.dsjarmory.items.tools.CustomTools.JanembaSword;
 import com.watershark9.dsjarmory.items.tools.CustomTools.LionEdge;
 import com.watershark9.dsjarmory.items.tools.CustomTools.TidalRift;
 import com.watershark9.dsjarmory.items.tools.CustomTools.Xentar;
+import com.watershark9.dsjarmory.items.tools.CustomTools.bane_of_seux;
 import com.watershark9.dsjarmory.items.tools.CustomTools.golden_fire;
 
 import net.minecraft.item.Item;
@@ -29,9 +30,10 @@ public class ModItems {
 	public static final ItemSword TIDAL_RIFT = new TidalRift("tidal_rift", MATERIAL_ORICHALCUM, 1.9, -1.7 ); // attack 18, speed 8
 	public static final Item XENTAR = new Xentar("xentar", MATERIAL_ORICHALCUM, 4.3, 1.5 ); // attack 40, speed 0.4
 	public static final Item DEMON_BLADE = new JanembaSword("demon_blade", MATERIAL_ORICHALCUM, 2.39, 1); // attack 22.5, speed 1.6
-	public static final Item LION_EDGE = new LionEdge("lion_edge", MATERIAL_ORICHALCUM, 1, 1.25); // attack 10, speed 1
+	public static final Item LION_EDGE = new LionEdge("lion_edge", MATERIAL_ORICHALCUM, 2.1, 1.25); // attack 10, speed 1 (attack also is damage for arrow)
 	public static final Item GOLDEN_FIRE = new golden_fire("golden_fire", MATERIAL_ORICHALCUM, 1.6, 0.3 ); // attack 15, speed 3.2
-	public static final Item CHAOS_BEGINS = new ChaosBegins("chaos_begins", MATERIAL_ORICHALCUM, 0.28, 0.8 ); // attack 0, speed 2
+	public static final Item CHAOS_BEGINS = new ChaosBegins("chaos_begins", MATERIAL_ORICHALCUM, 0.28, 1.3 ); // attack 3, speed 1.6
+	public static final Item BANEOFSEUX = new bane_of_seux("baneofseux", MATERIAL_ORICHALCUM, 0.42, 1 ); // attack 5, speed 1.6
 	
 	//Items
 	public static final Item ORICHALCUM_INGOT = new ItemBase("orichalcum_ingot");

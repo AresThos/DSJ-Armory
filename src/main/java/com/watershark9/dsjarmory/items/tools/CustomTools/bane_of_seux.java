@@ -12,16 +12,19 @@ import com.watershark9.dsjarmory.util.IHasModel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityLargeFireball;
+import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
@@ -31,7 +34,9 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
-public class Xentar extends ItemSword implements IHasModel {
+
+
+public class bane_of_seux extends ItemSword implements IHasModel {
 	
 	// Global Variables
 	private double attack, speed; // Default attack is 1; Default speed is 4
@@ -46,7 +51,7 @@ public class Xentar extends ItemSword implements IHasModel {
 	
 	// Constructor
 
-	public Xentar(String name, ToolMaterial material, double at, double sp) {
+	public bane_of_seux(String name, ToolMaterial material, double at, double sp) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
@@ -54,49 +59,38 @@ public class Xentar extends ItemSword implements IHasModel {
 		
 		ModItems.ITEMS.add(this);
 		
+		
+		
 		setAttack(at);
 		setSpeed(sp); 
 	}
 	
 	// Custom Stuff
 	
-	private void chargeAttack(EntityPlayer play, EnumHand hand, World world) {
-		if ( play.getCooledAttackStrength(0) == 1 ) {
-			
-			play.resetCooldown();
-			play.swingArm(hand);
-
-			Vec3d lookaim = play.getLookVec();
-			EntityLargeFireball fireb = new EntityLargeFireball(world,play,1,1,1);
-
-			double multiplyaim = 1.5D;
-			double accelaim = 0.1;
-
-			fireb.setPosition( (play.posX + lookaim.x * multiplyaim), ( (play.posY + 1) + lookaim.y * multiplyaim), (play.posZ + lookaim.z * multiplyaim) );
-			fireb.accelerationX = lookaim.x * accelaim;
-			fireb.accelerationY = lookaim.y * accelaim;
-			fireb.accelerationZ = lookaim.z * accelaim;
-			
-			
-			
-			world.spawnEntity(fireb);
-			
-			
-		}
+	private void effect(EntityLivingBase target, EntityLivingBase player) {
+		int duration = 1600/27, durationmulti = 2, multiplyKnockback = 3, minimumHieght = 1;
+		
+		
+		target.addVelocity(player.getLookVec().x * multiplyKnockback, ( (player.getLookVec().y + minimumHieght) * multiplyKnockback), player.getLookVec().z * multiplyKnockback);
+		
+		target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, duration, 1) );
+		target.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, (duration * durationmulti), 3) );
+		target.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, (duration * durationmulti), 3) );
+		
 	}
 	
 	// Custom Calls
 	
-	
-
-	
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
-		// Call Function:
-		chargeAttack(entity,hand,world);
-		//Default Stuff
-		return super.onItemRightClick(world, entity, hand);
+	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+		
+		
+		effect(target, attacker);
+		
+		
+		return super.hitEntity(stack, target, attacker);
 	}
+	
 	
 	// ItemTool stuff
 	

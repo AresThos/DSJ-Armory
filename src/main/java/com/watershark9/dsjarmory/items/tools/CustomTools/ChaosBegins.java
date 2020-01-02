@@ -50,8 +50,6 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 	}
 	
 	// Constructor
-	
-	EntityPlayer player;
 
 	public ChaosBegins(String name, ToolMaterial material, double at, double sp) {
 		super(material);
