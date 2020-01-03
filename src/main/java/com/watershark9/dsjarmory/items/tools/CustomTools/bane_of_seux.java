@@ -68,7 +68,7 @@ public class bane_of_seux extends ItemSword implements IHasModel {
 	// Custom Stuff
 	
 	private void effect(EntityLivingBase target, EntityLivingBase player) {
-		int duration = 1600/27, durationmulti = 2, multiplyKnockback = 3, minimumHieght = 1;
+		int duration = 1600/27, durationmulti = 2, multiplyKnockback = 4, minimumHieght = 1;
 		
 		
 		target.addVelocity(player.getLookVec().x * multiplyKnockback, ( (player.getLookVec().y + minimumHieght) * multiplyKnockback), player.getLookVec().z * multiplyKnockback);
