@@ -5,15 +5,15 @@ import com.watershark9.dsjarmory.init.ModItems;
 import com.watershark9.dsjarmory.util.IHasModel;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemAxe;
 
-public class ToolSword extends ItemSword implements IHasModel {
+public class ToolAxe extends ItemAxe implements IHasModel {
 
-	public ToolSword(String name, ToolMaterial material) {
-		super(material);
+	public ToolAxe(String name, ToolMaterial material) {
+		super(material, 6.0F, -3.2F);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(CreativeTabs.COMBAT);
+		setCreativeTab(CreativeTabs.TOOLS);
 		
 		ModItems.ITEMS.add(this);
 	}

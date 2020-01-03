@@ -1,4 +1,4 @@
-//Weapons
+//Exotics
 item.tidal_rift.name=Tidal Rift
 item.xentar.name=Hero's Chronicle
 item.demon_blade.name=Demon Blade
@@ -6,6 +6,13 @@ item.lion_edge.name=Lion's Edge
 item.golden_fire.name=Golden Fire
 item.chaos_begins.name=Chaos Begins
 item.baneofseux.name=Kavity
+
+//Tools
+item.orichalcum_sword.name=Orichalcum Sword
+item.orichalcum_hoe.name=Orichalcum Hoe
+item.orichalcum_axe.name=Orichalcum Axe
+item.orichalcum_pickaxe.name=Orichalcum Pickaxe
+item.orichalcum_spade.name=Orichalcum Spade
 
 //Items
 item.orichalcum_ingot.name=Orichalcum Ingot
