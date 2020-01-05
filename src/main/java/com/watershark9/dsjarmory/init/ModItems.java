@@ -50,7 +50,8 @@ public class ModItems {
 	 Custom Sword Damage Formula: f(x)=1+(9*x)
 	 Custom Sword Speed Formula: f(x)=4+(2.4*(-x))
 	 
-	 Example Template: CustomSword("custom_sword", MATERIAL, damage_formula_result, speed_formula_result )
+	 Example Template: 
+	 public static final ItemSword NAME_IN_ALL_CAPS = new CustomSword("custom_sword", MATERIAL, damage_formula_result, speed_formula_result )// attack intended, speed intended
 	 */
 	
 	//Exotic:
