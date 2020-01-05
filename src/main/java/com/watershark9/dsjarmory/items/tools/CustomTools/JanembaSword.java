@@ -76,7 +76,11 @@ public class JanembaSword extends ItemSword implements IHasModel {
 	
 	// Custom Calls
 	
-	
+	@Override
+	public boolean isEnchantable(ItemStack stack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 	
 	@Override

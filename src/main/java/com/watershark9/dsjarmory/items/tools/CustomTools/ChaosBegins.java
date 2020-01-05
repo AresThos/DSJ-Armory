@@ -59,6 +59,7 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 		
 		ModItems.ITEMS.add(this);
 		
+		
 		setAttack(at);
 		setSpeed(sp); 
 	}
@@ -68,6 +69,8 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 	
 	
 	// Custom Calls
+	
+	
 	
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
@@ -93,6 +96,12 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 	
 	
 	// ItemTool stuff
+	
+	@Override
+	public boolean isEnchantable(ItemStack stack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 	@Override
 	public void registerModels() {

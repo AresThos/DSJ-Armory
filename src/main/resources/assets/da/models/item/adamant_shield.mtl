@@ -1,0 +1,14 @@
+# Made in Blockbench 3.2.2
+newmtl 0
+map_Kd da:items/adamant_shield_back 
+newmtl 2
+map_Kd da:items/adamant_shield_front 
+newmtl 3
+map_Kd da:items/adamant_shield_grey1 
+newmtl 4
+map_Kd da:items/adamant_shield_grey2 
+newmtl 5
+map_Kd da:items/adamant_shield_grey3 
+newmtl 7
+map_Kd da:items/adamant_shield_topedge 
+newmtl none

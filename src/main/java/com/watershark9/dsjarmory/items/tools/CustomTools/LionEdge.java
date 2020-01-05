@@ -90,6 +90,12 @@ public class LionEdge extends ItemSword implements IHasModel {
 	// Custom Calls
 	
 	@Override
+	public boolean isEnchantable(ItemStack stack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	@Override
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
 		ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
 		// Call Function:
