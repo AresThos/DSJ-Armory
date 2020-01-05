@@ -15,8 +15,10 @@ import com.watershark9.dsjarmory.items.tools.CustomTools.JanembaSword;
 import com.watershark9.dsjarmory.items.tools.CustomTools.LionEdge;
 import com.watershark9.dsjarmory.items.tools.CustomTools.TidalRift;
 import com.watershark9.dsjarmory.items.tools.CustomTools.Xentar;
+import com.watershark9.dsjarmory.items.tools.CustomTools.ada_shield;
 import com.watershark9.dsjarmory.items.tools.CustomTools.bane_of_seux;
 import com.watershark9.dsjarmory.items.tools.CustomTools.golden_fire;
+import com.watershark9.dsjarmory.items.tools.CustomTools.melodias;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -44,6 +46,13 @@ public class ModItems {
 	public static final ItemPickaxe ORICHALCUM_PICKAXE = new ToolPickaxe("orichalcum_pickaxe", MATERIAL_ORICHALCUM);
 	public static final ItemSpade ORICHALCUM_SPADE = new ToolSpade("orichalcum_spade", MATERIAL_ORICHALCUM);
 	
+	/*
+	 Custom Sword Damage Formula: f(x)=1+(9*x)
+	 Custom Sword Speed Formula: f(x)=4+(2.4*(-x))
+	 
+	 Example Template: CustomSword("custom_sword", MATERIAL, damage_formula_result, speed_formula_result )
+	 */
+	
 	//Exotic:
 	
 	//DSJ
@@ -55,11 +64,11 @@ public class ModItems {
 	public static final ItemSword CHAOS_BEGINS = new ChaosBegins("chaos_begins", MATERIAL_ORICHALCUM, -0.1, 1.3 ); // attack 3, speed 1.6
 	public static final ItemSword BANEOFSEUX = new bane_of_seux("baneofseux", MATERIAL_ORICHALCUM, 0.42, 1 ); // attack 5, speed 1.6
 	
-	//Extras //melodias_rapier
-	public static final ItemSword MELODIAS_RAPIER = new ToolSword("melodias_rapier", MATERIAL_ORICHALCUM);
+	//Extras
+	public static final ItemSword MELODIAS_RAPIER = new melodias("melodias_rapier", ToolMaterial.DIAMOND, 0.77, 0.79 );
 	
 	//Equipment:
-	public static final ItemShield ADAMANT_SHIELD = new ToolShield("adamant_shield");
+	public static final ItemShield ADAMANT_SHIELD = new ada_shield("adamant_shield");
 	
 	//Items:
 	public static final Item ORICHALCUM_INGOT = new ItemBase("orichalcum_ingot");
