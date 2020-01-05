@@ -1,6 +1,261 @@
 {
-   "parent": "item/generated",
-   "textures": {
-       "layer0": "da:items/orichalcum_crystal"
-   }
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "da:items/orichalcum_crystal",
+		"particle": "da:items/orichalcum_crystal"
+	},
+	"elements": [
+		{
+			"name": "orichalcum_crystal_0",
+			"from": [6.4, 0, 0],
+			"to": [16, 0.8, 9.6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [16, 0, 6.4, 0.8], "texture": "#0"},
+				"east": {"uv": [15.2, 0, 16, 9.6], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [6.4, 8.8, 16, 9.6], "texture": "#0"},
+				"west": {"uv": [6.4, 0, 7.2, 9.6], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [6.4, 0, 16, 9.6], "texture": "#0"},
+				"down": {"uv": [6.4, 9.6, 16, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_1",
+			"from": [5.6, 0, 0.8],
+			"to": [6.4, 0.8, 14.4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [6.4, 0.8, 5.6, 1.6], "texture": "#0"},
+				"east": {"uv": [5.6, 0.8, 6.4, 14.4], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [5.6, 13.6, 6.4, 14.4], "texture": "#0"},
+				"west": {"uv": [5.6, 0.8, 6.4, 14.4], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [5.6, 0.8, 6.4, 14.4], "texture": "#0"},
+				"down": {"uv": [5.6, 14.4, 6.4, 0.8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_2",
+			"from": [4.8, 0, 2.4],
+			"to": [5.6, 0.8, 15.2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [5.6, 2.4, 4.8, 3.2], "texture": "#0"},
+				"east": {"uv": [4.8, 2.4, 5.6, 15.2], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [4.8, 14.4, 5.6, 15.2], "texture": "#0"},
+				"west": {"uv": [4.8, 2.4, 5.6, 15.2], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [4.8, 2.4, 5.6, 15.2], "texture": "#0"},
+				"down": {"uv": [4.8, 15.2, 5.6, 2.4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_3",
+			"from": [4, 0, 4],
+			"to": [4.8, 0.8, 15.2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [4.8, 4, 4, 4.8], "texture": "#0"},
+				"east": {"uv": [4, 4, 4.8, 15.2], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [4, 14.4, 4.8, 15.2], "texture": "#0"},
+				"west": {"uv": [4, 4, 4.8, 15.2], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [4, 4, 4.8, 15.2], "texture": "#0"},
+				"down": {"uv": [4, 15.2, 4.8, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_4",
+			"from": [3.2, 0, 5.6],
+			"to": [4, 0.8, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [4, 5.6, 3.2, 6.4], "texture": "#0"},
+				"east": {"uv": [3.2, 5.6, 4, 16], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [3.2, 15.2, 4, 16], "texture": "#0"},
+				"west": {"uv": [3.2, 5.6, 4, 16], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [3.2, 5.6, 4, 16], "texture": "#0"},
+				"down": {"uv": [3.2, 16, 4, 5.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_5",
+			"from": [2.4, 0, 7.2],
+			"to": [3.2, 0.8, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [3.2, 7.2, 2.4, 8], "texture": "#0"},
+				"east": {"uv": [2.4, 7.2, 3.2, 16], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [2.4, 15.2, 3.2, 16], "texture": "#0"},
+				"west": {"uv": [2.4, 7.2, 3.2, 16], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [2.4, 7.2, 3.2, 16], "texture": "#0"},
+				"down": {"uv": [2.4, 16, 3.2, 7.2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_6",
+			"from": [1.6, 0, 8.8],
+			"to": [2.4, 0.8, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [2.4, 8.8, 1.6, 9.6], "texture": "#0"},
+				"east": {"uv": [1.6, 8.8, 2.4, 16], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [1.6, 15.2, 2.4, 16], "texture": "#0"},
+				"west": {"uv": [1.6, 8.8, 2.4, 16], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [1.6, 8.8, 2.4, 16], "texture": "#0"},
+				"down": {"uv": [1.6, 16, 2.4, 8.8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_7",
+			"from": [6.4, 0, 9.6],
+			"to": [10.4, 0.8, 12.8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [10.4, 9.6, 6.4, 10.4], "texture": "#0"},
+				"east": {"uv": [9.6, 9.6, 10.4, 12.8], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [6.4, 12, 10.4, 12.8], "texture": "#0"},
+				"west": {"uv": [6.4, 9.6, 7.2, 12.8], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [6.4, 9.6, 10.4, 12.8], "texture": "#0"},
+				"down": {"uv": [6.4, 12.8, 10.4, 9.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_8",
+			"from": [10.4, 0, 9.6],
+			"to": [13.6, 0.8, 11.2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [13.6, 9.6, 10.4, 10.4], "texture": "#0"},
+				"east": {"uv": [12.8, 9.6, 13.6, 11.2], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [10.4, 10.4, 13.6, 11.2], "texture": "#0"},
+				"west": {"uv": [10.4, 9.6, 11.2, 11.2], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [10.4, 9.6, 13.6, 11.2], "texture": "#0"},
+				"down": {"uv": [10.4, 11.2, 13.6, 9.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_9",
+			"from": [13.6, 0, 9.6],
+			"to": [15.2, 0.8, 10.4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [15.2, 9.6, 13.6, 10.4], "texture": "#0"},
+				"east": {"uv": [14.4, 9.6, 15.2, 10.4], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [13.6, 9.6, 15.2, 10.4], "texture": "#0"},
+				"west": {"uv": [13.6, 9.6, 14.4, 10.4], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [13.6, 9.6, 15.2, 10.4], "texture": "#0"},
+				"down": {"uv": [13.6, 10.4, 15.2, 9.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_10",
+			"from": [0.8, 0, 10.4],
+			"to": [1.6, 0.8, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [1.6, 10.4, 0.8, 11.2], "texture": "#0"},
+				"east": {"uv": [0.8, 10.4, 1.6, 16], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0.8, 15.2, 1.6, 16], "texture": "#0"},
+				"west": {"uv": [0.8, 10.4, 1.6, 16], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [0.8, 10.4, 1.6, 16], "texture": "#0"},
+				"down": {"uv": [0.8, 16, 1.6, 10.4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_11",
+			"from": [10.4, 0, 11.2],
+			"to": [12, 0.8, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [12, 11.2, 10.4, 12], "texture": "#0"},
+				"east": {"uv": [11.2, 11.2, 12, 12], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [10.4, 11.2, 12, 12], "texture": "#0"},
+				"west": {"uv": [10.4, 11.2, 11.2, 12], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [10.4, 11.2, 12, 12], "texture": "#0"},
+				"down": {"uv": [10.4, 12, 12, 11.2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_12",
+			"from": [0, 0, 12],
+			"to": [0.8, 0.8, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [0.8, 12, 0, 12.8], "texture": "#0"},
+				"east": {"uv": [0, 12, 0.8, 16], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 15.2, 0.8, 16], "texture": "#0"},
+				"west": {"uv": [0, 12, 0.8, 16], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [0, 12, 0.8, 16], "texture": "#0"},
+				"down": {"uv": [0, 16, 0.8, 12], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_13",
+			"from": [6.4, 0, 12.8],
+			"to": [8, 0.8, 14.4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [8, 12.8, 6.4, 13.6], "texture": "#0"},
+				"east": {"uv": [7.2, 12.8, 8, 14.4], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [6.4, 13.6, 8, 14.4], "texture": "#0"},
+				"west": {"uv": [6.4, 12.8, 7.2, 14.4], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [6.4, 12.8, 8, 14.4], "texture": "#0"},
+				"down": {"uv": [6.4, 14.4, 8, 12.8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_crystal_14",
+			"from": [8, 0, 12.8],
+			"to": [8.8, 0.8, 13.6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6.57825, 0.39253, 10.84255]},
+			"faces": {
+				"north": {"uv": [8.8, 12.8, 8, 13.6], "texture": "#0"},
+				"east": {"uv": [8, 12.8, 8.8, 13.6], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [8, 12.8, 8.8, 13.6], "texture": "#0"},
+				"west": {"uv": [8, 12.8, 8.8, 13.6], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [8, 12.8, 8.8, 13.6], "texture": "#0"},
+				"down": {"uv": [8, 13.6, 8.8, 12.8], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [90, 0, 0],
+			"translation": [1, 1.75, 2],
+			"scale": [0.2, 0.2, 0.2]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [90, 0, 0],
+			"translation": [0.5, 1.75, 2],
+			"scale": [-0.2, 0.2, 0.2]
+		},
+		"firstperson_righthand": {
+			"rotation": [90, 0, 0],
+			"translation": [3.75, 0, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [90, 0, 0],
+			"translation": [3.75, 0, 0],
+			"scale": [-0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"rotation": [90, 20, -1],
+			"translation": [1.25, 0.5, 3.25],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [90, 0, 0]
+		},
+		"fixed": {
+			"rotation": [90, 0, 0],
+			"translation": [0, 0, 7.25],
+			"scale": [-1, 1, 1]
+		}
+	},
+	"groups": [
+		{
+			"name": "orichalcum_crystal",
+			"origin": [8, 8, 8],
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+		}
+	]
 }

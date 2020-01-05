@@ -1,6 +1,309 @@
 {
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "da:items/orichalcum_sword"
-    }
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "da:items/orichalcum_sword",
+		"particle": "da:items/orichalcum_sword"
+	},
+	"elements": [
+		{
+			"name": "orichalcum_sword_0",
+			"from": [12.8, 12.41791, 7.81838],
+			"to": [16, 15.61791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [12.8, 3.2, 16, 0], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [15.2, 0, 16, 3.2], "texture": "#0"},
+				"south": {"uv": [12.8, 0, 16, 3.2], "texture": "#0"},
+				"west": {"uv": [12.8, 0, 13.6, 3.2], "texture": "#0"},
+				"up": {"uv": [16, 0, 12.8, 0.8], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [12.8, 2.4, 16, 3.2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_1",
+			"from": [12, 9.21791, 7.81838],
+			"to": [12.8, 14.81791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [12, 6.4, 12.8, 0.8], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [12, 0.8, 12.8, 6.4], "texture": "#0"},
+				"south": {"uv": [12, 0.8, 12.8, 6.4], "texture": "#0"},
+				"west": {"uv": [12, 0.8, 12.8, 6.4], "texture": "#0"},
+				"up": {"uv": [12.8, 0.8, 12, 1.6], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [12, 5.6, 12.8, 6.4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_2",
+			"from": [11.2, 8.41791, 7.81838],
+			"to": [12, 14.01791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [11.2, 7.2, 12, 1.6], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [11.2, 1.6, 12, 7.2], "texture": "#0"},
+				"south": {"uv": [11.2, 1.6, 12, 7.2], "texture": "#0"},
+				"west": {"uv": [11.2, 1.6, 12, 7.2], "texture": "#0"},
+				"up": {"uv": [12, 1.6, 11.2, 2.4], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [11.2, 6.4, 12, 7.2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_3",
+			"from": [10.4, 7.61791, 7.81838],
+			"to": [11.2, 13.21791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [10.4, 8, 11.2, 2.4], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [10.4, 2.4, 11.2, 8], "texture": "#0"},
+				"south": {"uv": [10.4, 2.4, 11.2, 8], "texture": "#0"},
+				"west": {"uv": [10.4, 2.4, 11.2, 8], "texture": "#0"},
+				"up": {"uv": [11.2, 2.4, 10.4, 3.2], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [10.4, 7.2, 11.2, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_4",
+			"from": [9.6, 6.01791, 7.81838],
+			"to": [10.4, 12.41791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [9.6, 9.6, 10.4, 3.2], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [9.6, 3.2, 10.4, 9.6], "texture": "#0"},
+				"south": {"uv": [9.6, 3.2, 10.4, 9.6], "texture": "#0"},
+				"west": {"uv": [9.6, 3.2, 10.4, 9.6], "texture": "#0"},
+				"up": {"uv": [10.4, 3.2, 9.6, 4], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [9.6, 8.8, 10.4, 9.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_5",
+			"from": [12.8, 10.81791, 7.81838],
+			"to": [14.4, 12.41791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [12.8, 4.8, 14.4, 3.2], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [13.6, 3.2, 14.4, 4.8], "texture": "#0"},
+				"south": {"uv": [12.8, 3.2, 14.4, 4.8], "texture": "#0"},
+				"west": {"uv": [12.8, 3.2, 13.6, 4.8], "texture": "#0"},
+				"up": {"uv": [14.4, 3.2, 12.8, 4], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [12.8, 4, 14.4, 4.8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_6",
+			"from": [14.4, 11.61791, 7.81838],
+			"to": [15.2, 12.41791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [14.4, 4, 15.2, 3.2], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [14.4, 3.2, 15.2, 4], "texture": "#0"},
+				"south": {"uv": [14.4, 3.2, 15.2, 4], "texture": "#0"},
+				"west": {"uv": [14.4, 3.2, 15.2, 4], "texture": "#0"},
+				"up": {"uv": [15.2, 3.2, 14.4, 4], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [14.4, 3.2, 15.2, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_7",
+			"from": [8.8, 2.01791, 7.81838],
+			"to": [9.6, 11.61791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [8.8, 13.6, 9.6, 4], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [8.8, 4, 9.6, 13.6], "texture": "#0"},
+				"south": {"uv": [8.8, 4, 9.6, 13.6], "texture": "#0"},
+				"west": {"uv": [8.8, 4, 9.6, 13.6], "texture": "#0"},
+				"up": {"uv": [9.6, 4, 8.8, 4.8], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [8.8, 12.8, 9.6, 13.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_8",
+			"from": [8, 2.01791, 7.81838],
+			"to": [8.8, 10.81791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [8, 13.6, 8.8, 4.8], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [8, 4.8, 8.8, 13.6], "texture": "#0"},
+				"south": {"uv": [8, 4.8, 8.8, 13.6], "texture": "#0"},
+				"west": {"uv": [8, 4.8, 8.8, 13.6], "texture": "#0"},
+				"up": {"uv": [8.8, 4.8, 8, 5.6], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [8, 12.8, 8.8, 13.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_9",
+			"from": [12.8, 10.01791, 7.81838],
+			"to": [13.6, 10.81791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [12.8, 5.6, 13.6, 4.8], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [12.8, 4.8, 13.6, 5.6], "texture": "#0"},
+				"south": {"uv": [12.8, 4.8, 13.6, 5.6], "texture": "#0"},
+				"west": {"uv": [12.8, 4.8, 13.6, 5.6], "texture": "#0"},
+				"up": {"uv": [13.6, 4.8, 12.8, 5.6], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [12.8, 4.8, 13.6, 5.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_10",
+			"from": [6.4, 2.81791, 7.81838],
+			"to": [8, 10.01791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [6.4, 12.8, 8, 5.6], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [7.2, 5.6, 8, 12.8], "texture": "#0"},
+				"south": {"uv": [6.4, 5.6, 8, 12.8], "texture": "#0"},
+				"west": {"uv": [6.4, 5.6, 7.2, 12.8], "texture": "#0"},
+				"up": {"uv": [8, 5.6, 6.4, 6.4], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [6.4, 12, 8, 12.8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_11",
+			"from": [2.4, 7.61791, 7.81838],
+			"to": [6.4, 9.21791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [2.4, 8, 6.4, 6.4], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [5.6, 6.4, 6.4, 8], "texture": "#0"},
+				"south": {"uv": [2.4, 6.4, 6.4, 8], "texture": "#0"},
+				"west": {"uv": [2.4, 6.4, 3.2, 8], "texture": "#0"},
+				"up": {"uv": [6.4, 6.4, 2.4, 7.2], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [2.4, 7.2, 6.4, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_12",
+			"from": [3.2, 2.81791, 7.81838],
+			"to": [6.4, 7.61791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [3.2, 12.8, 6.4, 8], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [5.6, 8, 6.4, 12.8], "texture": "#0"},
+				"south": {"uv": [3.2, 8, 6.4, 12.8], "texture": "#0"},
+				"west": {"uv": [3.2, 8, 4, 12.8], "texture": "#0"},
+				"up": {"uv": [6.4, 8, 3.2, 8.8], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [3.2, 12, 6.4, 12.8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_13",
+			"from": [2.4, 5.21791, 7.81838],
+			"to": [3.2, 6.81791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [2.4, 10.4, 3.2, 8.8], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [2.4, 8.8, 3.2, 10.4], "texture": "#0"},
+				"south": {"uv": [2.4, 8.8, 3.2, 10.4], "texture": "#0"},
+				"west": {"uv": [2.4, 8.8, 3.2, 10.4], "texture": "#0"},
+				"up": {"uv": [3.2, 8.8, 2.4, 9.6], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [2.4, 9.6, 3.2, 10.4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_14",
+			"from": [2.4, 1.21791, 7.81838],
+			"to": [3.2, 3.61791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [2.4, 14.4, 3.2, 12], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [2.4, 12, 3.2, 14.4], "texture": "#0"},
+				"south": {"uv": [2.4, 12, 3.2, 14.4], "texture": "#0"},
+				"west": {"uv": [2.4, 12, 3.2, 14.4], "texture": "#0"},
+				"up": {"uv": [3.2, 12, 2.4, 12.8], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [2.4, 13.6, 3.2, 14.4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_15",
+			"from": [1.6, 0.41791, 7.81838],
+			"to": [2.4, 2.81791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [1.6, 15.2, 2.4, 12.8], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [1.6, 12.8, 2.4, 15.2], "texture": "#0"},
+				"south": {"uv": [1.6, 12.8, 2.4, 15.2], "texture": "#0"},
+				"west": {"uv": [1.6, 12.8, 2.4, 15.2], "texture": "#0"},
+				"up": {"uv": [2.4, 12.8, 1.6, 13.6], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [1.6, 14.4, 2.4, 15.2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_16",
+			"from": [3.2, 2.01791, 7.81838],
+			"to": [4, 2.81791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [3.2, 13.6, 4, 12.8], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [3.2, 12.8, 4, 13.6], "texture": "#0"},
+				"south": {"uv": [3.2, 12.8, 4, 13.6], "texture": "#0"},
+				"west": {"uv": [3.2, 12.8, 4, 13.6], "texture": "#0"},
+				"up": {"uv": [4, 12.8, 3.2, 13.6], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [3.2, 12.8, 4, 13.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_17",
+			"from": [5.6, 2.01791, 7.81838],
+			"to": [7.2, 2.81791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [5.6, 13.6, 7.2, 12.8], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [6.4, 12.8, 7.2, 13.6], "texture": "#0"},
+				"south": {"uv": [5.6, 12.8, 7.2, 13.6], "texture": "#0"},
+				"west": {"uv": [5.6, 12.8, 6.4, 13.6], "texture": "#0"},
+				"up": {"uv": [7.2, 12.8, 5.6, 13.6], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [5.6, 12.8, 7.2, 13.6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "orichalcum_sword_18",
+			"from": [0.8, 0.41791, 7.81838],
+			"to": [1.6, 2.01791, 8.61838],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8.09788, 7.39977, 8.21814]},
+			"faces": {
+				"north": {"uv": [0.8, 15.2, 1.6, 13.6], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [0.8, 13.6, 1.6, 15.2], "texture": "#0"},
+				"south": {"uv": [0.8, 13.6, 1.6, 15.2], "texture": "#0"},
+				"west": {"uv": [0.8, 13.6, 1.6, 15.2], "texture": "#0"},
+				"up": {"uv": [1.6, 13.6, 0.8, 14.4], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0.8, 14.4, 1.6, 15.2], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-39.75, -90, 0],
+			"translation": [0.25, 6.25, 2]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-39.75, -90, 0],
+			"translation": [0.25, 6.25, 2],
+			"scale": [-1, 1, -1]
+		},
+		"firstperson_righthand": {
+			"rotation": [27.5, 90, 0],
+			"translation": [0, 0.75, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [27.5, 90, 0],
+			"translation": [0, 0.75, 0],
+			"scale": [-1, 1, -1]
+		},
+		"ground": {
+			"scale": [0.69, 0.69, 0.69]
+		},
+		"fixed": {
+			"translation": [0, 0, -0.75],
+			"scale": [-1, 1, 1]
+		}
+	},
+	"groups": [
+		{
+			"name": "orichalcum_sword",
+			"origin": [8, 8, 8],
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+		}
+	]
 }
