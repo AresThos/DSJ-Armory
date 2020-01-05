@@ -7,6 +7,9 @@ item.golden_fire.name=Golden Fire
 item.chaos_begins.name=Chaos Begins
 item.baneofseux.name=Kavity
 
+//Equipment
+item.adamant_shield.name=Adamant Shield
+
 //Tools
 item.orichalcum_sword.name=Orichalcum Sword
 item.orichalcum_hoe.name=Orichalcum Hoe

@@ -12,6 +12,7 @@ import com.watershark9.dsjarmory.util.IHasModel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
@@ -77,6 +78,8 @@ public class golden_fire extends ItemSword implements IHasModel {
 			
 			
 			
+			
+			
 			play.swingArm( hand );
 			
 		}
@@ -84,6 +87,13 @@ public class golden_fire extends ItemSword implements IHasModel {
 	
 	// Custom Calls
 	
+	@Override
+	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+		int secondsOnFire = 5;
+		target.setFire(secondsOnFire);
+		
+		return super.hitEntity(stack, target, attacker);
+	}
 	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
@@ -96,6 +106,12 @@ public class golden_fire extends ItemSword implements IHasModel {
 	
 	
 	// ItemTool stuff
+	
+	@Override
+	public boolean isEnchantable(ItemStack stack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 	@Override
 	public void registerModels() {

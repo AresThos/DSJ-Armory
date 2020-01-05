@@ -101,6 +101,12 @@ public class Xentar extends ItemSword implements IHasModel {
 	// ItemTool stuff
 	
 	@Override
+	public boolean isEnchantable(ItemStack stack) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	@Override
 	public void registerModels() {
 		
 		Main.proxy.registerItemRenderer(this, 0, "inventory");
