@@ -67,7 +67,7 @@ public class ModItems {
 	
 	//Extras
 	public static final ItemSword MELODIAS_RAPIER = new melodias("melodias_rapier", ToolMaterial.DIAMOND, 0.77, 0.79 );
-	
+	public static final ItemSword PALADUS = new CustomSword("paladun_sword", ToolMaterial.GOLD, 0.78, 1.25)// attack 8, speed 1
 	//Equipment:
 	public static final ItemShield ADAMANT_SHIELD = new ada_shield("adamant_shield");
 	
