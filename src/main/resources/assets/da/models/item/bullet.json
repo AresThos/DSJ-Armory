@@ -1,13 +1,13 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "block/front1",
-		"1": "block/front2",
-		"2": "block/front3",
-		"3": "block/side1",
-		"4": "block/side 2",
-		"5": "block/side3",
-		"particle": "block/front1"
+		"0": "da:extras/front1",
+		"1": "da:extras/front2",
+		"2": "da:extras/front3",
+		"3": "da:extras/side1",
+		"4": "da:extras/side 2",
+		"5": "da:extras/side3",
+		"particle": "da:extras/front1"
 	},
 	"elements": [
 		{

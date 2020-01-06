@@ -1,14 +1,14 @@
 # Made in Blockbench 3.2.2
 newmtl 0
-map_Kd front1 
+map_Kd da:extras/front1 
 newmtl 1
-map_Kd front2 
+map_Kd da:extras/front2 
 newmtl 2
-map_Kd front3 
+map_Kd da:extras/front3 
 newmtl 3
-map_Kd side1 
+map_Kd da:extras/side1 
 newmtl 4
-map_Kd side 2 
+map_Kd da:extras/side 2 
 newmtl 5
-map_Kd side3 
+map_Kd da:extras/side3 
 newmtl none

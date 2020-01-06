@@ -76,5 +76,7 @@ public class ModItems {
 	public static final Item ORICHALCUM_INGOT = new ItemBase("orichalcum_ingot");
 	public static final Item ORICHALCUM_CRYSTAL = new ItemBase("orichalcum_crystal");
 	
+	public static final Item BULLET = new ItemBase("bullet");
+	
 	
 }
