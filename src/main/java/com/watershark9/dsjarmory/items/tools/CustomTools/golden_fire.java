@@ -67,7 +67,7 @@ public class golden_fire extends ItemSword implements IHasModel {
 	
 	// Custom Stuff
 	
-	public void buff(EntityPlayer play, EnumHand hand) {
+	public void buff(EntityLivingBase play) {
 		if ( play.getHeldItemOffhand().getItem() == play.getHeldItemMainhand().getItem() ) {
 			int duration = 1600;
 			int boost = 3;
@@ -75,12 +75,6 @@ public class golden_fire extends ItemSword implements IHasModel {
 			play.addPotionEffect(new PotionEffect(MobEffects.SPEED, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, duration, boost));
-			
-			
-			
-			
-			
-			play.swingArm( hand );
 			
 		}
 	}
@@ -98,7 +92,7 @@ public class golden_fire extends ItemSword implements IHasModel {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 		
-		buff(playerIn, handIn);
+		buff(playerIn);
 		
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
