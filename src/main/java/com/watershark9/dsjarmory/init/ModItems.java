@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.watershark9.dsjarmory.items.ItemBase;
+import com.watershark9.dsjarmory.items.tools.CustomSword;
 import com.watershark9.dsjarmory.items.tools.ToolAxe;
 import com.watershark9.dsjarmory.items.tools.ToolHoe;
 import com.watershark9.dsjarmory.items.tools.ToolPickaxe;
@@ -51,7 +52,7 @@ public class ModItems {
 	 Custom Sword Speed Formula: f(x)=4+(2.4*(-x))
 	 
 	 Example Template: 
-	 public static final ItemSword NAME_IN_ALL_CAPS = new CustomSword("custom_sword", MATERIAL, damage_formula_result, speed_formula_result )// attack intended, speed intended
+	 public static final ItemSword NAME_IN_ALL_CAPS = new CustomSword("custom_sword", MATERIAL, damage_formula_result, speed_formula_result ); // attack intended, speed intended
 	 */
 	
 	//Exotic:
@@ -66,8 +67,8 @@ public class ModItems {
 	public static final ItemSword BANEOFSEUX = new bane_of_seux("baneofseux", MATERIAL_ORICHALCUM, 0.42, 1 ); // attack 5, speed 1.6
 	
 	//Extras
-	public static final ItemSword MELODIAS_RAPIER = new melodias("melodias_rapier", ToolMaterial.DIAMOND, 0.77, 0.79 );
-	public static final ItemSword PALADUS = new CustomSword("paladun_sword", ToolMaterial.GOLD, 0.78, 1.25)// attack 8, speed 1
+	public static final ItemSword MELODIAS_RAPIER = new melodias("melodias_rapier", ToolMaterial.DIAMOND, 0.77, 0.79 ); // attack 8, speed 2
+	public static final ItemSword PALADUS = new CustomSword("paladun_sword", ToolMaterial.GOLD, 0.78, 1.25); // attack 8, speed 1
 	//Equipment:
 	public static final ItemShield ADAMANT_SHIELD = new ada_shield("adamant_shield");
 	
