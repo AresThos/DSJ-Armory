@@ -17,6 +17,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.item.EntityEnderPearl;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.init.MobEffects;
@@ -51,7 +52,7 @@ public class golden_fire extends ItemSword implements IHasModel {
 	
 	// Constructor
 	
-	EntityPlayer player;
+	
 
 	public golden_fire(String name, ToolMaterial material, double at, double sp) {
 		super(material);
@@ -67,34 +68,67 @@ public class golden_fire extends ItemSword implements IHasModel {
 	
 	// Custom Stuff
 	
-	public void buff(EntityLivingBase play) {
+	private boolean isDualWielding(EntityLivingBase play) {
 		if ( play.getHeldItemOffhand().getItem() == play.getHeldItemMainhand().getItem() ) {
-			int duration = 1600;
-			int boost = 3;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	private void buff(EntityLivingBase play, int duration, int boost) {
+		if ( isDualWielding(play) ) {
+			//duration = 1600; boost = 3;
 			
 			play.addPotionEffect(new PotionEffect(MobEffects.SPEED, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, duration, boost));
-			
 		}
+	}
+	private void fireAttack(EntityLivingBase target, int secondsOnFire) { target.setFire(secondsOnFire); }
+	
+	private void removebuff(EntityLivingBase play) {
+		play.removePotionEffect(MobEffects.SPEED);
+		play.removePotionEffect(MobEffects.FIRE_RESISTANCE);
+		play.removePotionEffect(MobEffects.RESISTANCE);
+	}
+	
+	private boolean isBuffActive(EntityLivingBase entity) {
+		
+		if( entity.getActivePotionEffect( MobEffects.FIRE_RESISTANCE ) == null ) {
+			return false;
+		}
+		else {
+			return true;
+		}
+		
 	}
 	
 	// Custom Calls
 	
+	/*
 	@Override
-	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		int secondsOnFire = 5;
-		target.setFire(secondsOnFire);
+	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+		// TODO Auto-generated method stub
+		EntityPlayer player = Minecraft.getMinecraft().player;
+		if(isDualWielding( player ) && !isBuffActive( player ) ) {
+			buff(player,1600,3);
+		}
+		else {
+			removebuff(player);
+		}
 		
-		return super.hitEntity(stack, target, attacker);
-	}
+		super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
+	} */
 	
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 		
-		buff(playerIn);
+		fireAttack( target,5 );
+		buff(attacker,1600,3);
 		
-		return super.onItemRightClick(worldIn, playerIn, handIn);
+		return super.hitEntity(stack, target, attacker);
 	}
 	
 	
