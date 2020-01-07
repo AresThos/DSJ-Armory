@@ -48,8 +48,8 @@ public class ModItems {
 	public static final ItemSpade ORICHALCUM_SPADE = new ToolSpade("orichalcum_spade", MATERIAL_ORICHALCUM);
 	
 	/*
-	 Custom Sword Damage Formula: f(x)=1+(9*x)
-	 Custom Sword Speed Formula: f(x)=4+(2.4*(-x))
+	 Custom Sword Damage Formula: f(x)=1+(7*x)
+	 Custom Sword Speed Formula: f(x)=4+((2.4)*(-(x)))
 	 
 	 Example Template: 
 	 public static final ItemSword NAME_IN_ALL_CAPS = new CustomSword("custom_sword", MATERIAL, damage_formula_result, speed_formula_result ); // attack intended, speed intended
@@ -58,11 +58,11 @@ public class ModItems {
 	//Exotic:
 	
 	//DSJ
-	public static final ItemSword TIDAL_RIFT = new TidalRift("tidal_rift", MATERIAL_ORICHALCUM, 1.9, -1.7 ); // attack 18, speed 8
+	public static final ItemSword TIDAL_RIFT = new TidalRift("tidal_rift", MATERIAL_ORICHALCUM, 1.1, -1.7 ); // attack 9, speed 8
 	public static final ItemSword XENTAR = new Xentar("xentar", MATERIAL_ORICHALCUM, 4.3, 1.5 ); // attack 40, speed 0.4
 	public static final ItemSword DEMON_BLADE = new JanembaSword("demon_blade", MATERIAL_ORICHALCUM, 2.39, 1); // attack 22.5, speed 1.6
 	public static final ItemSword LION_EDGE = new LionEdge("lion_edge", MATERIAL_ORICHALCUM, 2.1, 1.25); // attack 10, speed 1 (attack also is damage for arrow)
-	public static final ItemSword GOLDEN_FIRE = new golden_fire("golden_fire", MATERIAL_ORICHALCUM, 1.6, 0.3 ); // attack 15, speed 3.2
+	public static final ItemSword GOLDEN_FIRE = new golden_fire("golden_fire", MATERIAL_ORICHALCUM, 0, 1, 0.3 ); // attack random between 1 and 8, speed 3.2
 	public static final ItemSword CHAOS_BEGINS = new ChaosBegins("chaos_begins", MATERIAL_ORICHALCUM, -0.1, 1.3 ); // attack 3, speed 1.6
 	public static final ItemSword BANEOFSEUX = new bane_of_seux("baneofseux", MATERIAL_ORICHALCUM, 0.42, 1 ); // attack 5, speed 1.6
 	

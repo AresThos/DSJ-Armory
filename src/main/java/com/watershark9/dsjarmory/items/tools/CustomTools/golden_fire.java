@@ -1,7 +1,9 @@
 package com.watershark9.dsjarmory.items.tools.CustomTools;
 
 import java.util.Collection;
+
 import java.util.Optional;
+import java.util.Random;
 import java.util.UUID;
 
 import com.google.common.collect.Multimap;
@@ -35,41 +37,39 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 
 
 public class golden_fire extends ItemSword implements IHasModel {
 	
 	// Global Variables
-	private double attack, speed; // Default attack is 1; Default speed is 4
-	
-	private void setAttack(double at) {
-		attack = at; // f(x)=1+(9*x)
-	}
-	
-	private void setSpeed(double sp) {
-		speed = sp; // f(x)=4+(2.4*(-x))
-	}
+	private double attack, speed, mini,maxi; // Default attack is 1; Default speed is 4
 	
 	// Constructor
 	
-	
+	private double randomNumber(double rangeMin, double rangeMax) {
+		Random r = new Random();
+		return rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+	}
 
-	public golden_fire(String name, ToolMaterial material, double at, double sp) {
+	public golden_fire(String name, ToolMaterial material, double min, double max, double sp) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.COMBAT);
 		
 		ModItems.ITEMS.add(this);
-		
-		setAttack(at);
-		setSpeed(sp); 
+		mini=min;
+		maxi=max;
+		attack = randomNumber(mini,maxi);
+		speed = sp;
 	}
 	
 	// Custom Stuff
 	
 	private boolean isDualWielding(EntityLivingBase play) {
-		if ( play.getHeldItemOffhand().getItem() == play.getHeldItemMainhand().getItem() ) {
+		if ( play.getHeldItemOffhand().getItem() == play.getHeldItemMainhand().getItem() ) { 
 			return true;
 		}
 		else {
@@ -84,9 +84,14 @@ public class golden_fire extends ItemSword implements IHasModel {
 			play.addPotionEffect(new PotionEffect(MobEffects.SPEED, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, duration, boost));
+			
+			play.swingArm( play.getActiveHand().OFF_HAND );
 		}
 	}
-	private void fireAttack(EntityLivingBase target, int secondsOnFire) { target.setFire(secondsOnFire); }
+	private void fireAttack(EntityLivingBase target, int secondsOnFire) {
+		target.setFire(secondsOnFire);
+		
+		}
 	
 	private void removebuff(EntityLivingBase play) {
 		play.removePotionEffect(MobEffects.SPEED);
@@ -124,8 +129,8 @@ public class golden_fire extends ItemSword implements IHasModel {
 	
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		
-		fireAttack( target,5 );
+		attack = randomNumber(mini,maxi);
+		fireAttack( target,2 );
 		buff(attacker,1600,3);
 		
 		return super.hitEntity(stack, target, attacker);
