@@ -1,13 +1,13 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "da:blocks/DSJ crafting table/New Piskel-1.png",
-		"1": "da:blocks/DSJ crafting table/somewood",
-		"2": "da:blocks/DSJ crafting table/log_big_oak_top-1.png",
-		"3": "da:blocks/DSJ crafting table/sides2-1.png",
-		"5": "da:blocks/books textures/book1",
-		"6": "da:blocks/books textures/New Piskel-1.png",
-		"particle": "da:blocks/DSJ crafting table/New Piskel-1.png"
+		"0": "da:blocks/exotic_workbench_table (9)",
+		"1": "da:blocks/exotic_workbench_table (5)",
+		"2": "da:blocks/exotic_workbench_table (8)",
+		"3": "da:blocks/exotic_workbench_table (4)",
+		"5": "da:blocks/exotic_workbench_table (7)",
+		"6": "da:blocks/exotic_workbench_table (10)",
+		"particle": "da:blocks/exotic_workbench_table (9)"
 	},
 	"elements": [
 		{

@@ -3,7 +3,7 @@ package com.watershark9.dsjarmory.blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
-public class OrichalcumBlock extends BlockBase{
+public class OrichalcumBlock extends StandardCubeBlock{
 
 	public OrichalcumBlock(String name, Material material) {
 		super(name, material);
