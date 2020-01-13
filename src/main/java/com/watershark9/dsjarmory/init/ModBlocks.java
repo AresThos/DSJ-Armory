@@ -16,4 +16,9 @@ public class ModBlocks {
 	
 	public static final Block ORICHALCUM_BLOCK = new OrichalcumBlock("orichalcum_block", Material.IRON);
 	public static final Block ORICHALCUM_ORE = new OrichalcumOre("orichalcum_ore", Material.ROCK);
+	
+	//Utility Blocks
+	public static final Block GLASS_FURNACE = new BlockBase("glass_furnace", Material.ROCK);
+	public static final Block EXOTIC_WORKBENCH = new BlockBase("exotic_workbench", Material.WOOD);
+	
 }

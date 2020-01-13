@@ -1,7 +1,9 @@
 package com.watershark9.dsjarmory.items.tools.CustomTools;
 
 import java.util.Collection;
+
 import java.util.Optional;
+import java.util.Random;
 import java.util.UUID;
 
 import com.google.common.collect.Multimap;
@@ -17,6 +19,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.item.EntityEnderPearl;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.init.MobEffects;
@@ -34,73 +37,103 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 
 
 public class golden_fire extends ItemSword implements IHasModel {
 	
 	// Global Variables
-	private double attack, speed; // Default attack is 1; Default speed is 4
-	
-	private void setAttack(double at) {
-		attack = at; // f(x)=1+(9*x)
-	}
-	
-	private void setSpeed(double sp) {
-		speed = sp; // f(x)=4+(2.4*(-x))
-	}
+	private double attack, speed, mini,maxi; // Default attack is 1; Default speed is 4
 	
 	// Constructor
 	
-	EntityPlayer player;
+	private double randomNumber(double rangeMin, double rangeMax) {
+		Random r = new Random();
+		return rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+	}
 
-	public golden_fire(String name, ToolMaterial material, double at, double sp) {
+	public golden_fire(String name, ToolMaterial material, double min, double max, double sp) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.COMBAT);
 		
 		ModItems.ITEMS.add(this);
-		
-		setAttack(at);
-		setSpeed(sp); 
+		mini=min;
+		maxi=max;
+		attack = randomNumber(mini,maxi);
+		speed = sp;
 	}
 	
 	// Custom Stuff
 	
-	public void buff(EntityPlayer play, EnumHand hand) {
-		if ( play.getHeldItemOffhand().getItem() == play.getHeldItemMainhand().getItem() ) {
-			int duration = 1600;
-			int boost = 3;
+	private boolean isDualWielding(EntityLivingBase play) {
+		if ( play.getHeldItemOffhand().getItem() == play.getHeldItemMainhand().getItem() ) { 
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	private void buff(EntityLivingBase play, int duration, int boost) {
+		if ( isDualWielding(play) ) {
+			//duration = 1600; boost = 3;
 			
 			play.addPotionEffect(new PotionEffect(MobEffects.SPEED, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, duration, boost));
 			
-			
-			
-			
-			
-			play.swingArm( hand );
-			
+			play.swingArm( play.getActiveHand().OFF_HAND );
 		}
+	}
+	private void fireAttack(EntityLivingBase target, int secondsOnFire) {
+		target.setFire(secondsOnFire);
+		
+		}
+	
+	private void removebuff(EntityLivingBase play) {
+		play.removePotionEffect(MobEffects.SPEED);
+		play.removePotionEffect(MobEffects.FIRE_RESISTANCE);
+		play.removePotionEffect(MobEffects.RESISTANCE);
+	}
+	
+	private boolean isBuffActive(EntityLivingBase entity) {
+		
+		if( entity.getActivePotionEffect( MobEffects.FIRE_RESISTANCE ) == null ) {
+			return false;
+		}
+		else {
+			return true;
+		}
+		
 	}
 	
 	// Custom Calls
 	
+	/*
 	@Override
-	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-		int secondsOnFire = 5;
-		target.setFire(secondsOnFire);
+	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+		// TODO Auto-generated method stub
+		EntityPlayer player = Minecraft.getMinecraft().player;
+		if(isDualWielding( player ) && !isBuffActive( player ) ) {
+			buff(player,1600,3);
+		}
+		else {
+			removebuff(player);
+		}
 		
-		return super.hitEntity(stack, target, attacker);
-	}
+		super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
+	} */
 	
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+		attack = randomNumber(mini,maxi);
+		fireAttack( target,2 );
+		buff(attacker,1600,3);
 		
-		buff(playerIn, handIn);
-		
-		return super.onItemRightClick(worldIn, playerIn, handIn);
+		return super.hitEntity(stack, target, attacker);
 	}
 	
 	

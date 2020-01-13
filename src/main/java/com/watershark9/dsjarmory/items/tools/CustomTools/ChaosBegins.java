@@ -2,6 +2,7 @@ package com.watershark9.dsjarmory.items.tools.CustomTools;
 
 import java.util.Collection;
 import java.util.Optional;
+import java.util.Random;
 import java.util.UUID;
 
 import com.google.common.collect.Multimap;
@@ -66,7 +67,10 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 	
 	// Custom Stuff
 	
-	
+	private int randomNumber(int rangeMin, int rangeMax) {
+		Random r = new Random();
+		return rangeMin + (rangeMax - rangeMin) * r.nextInt();
+	}
 	
 	// Custom Calls
 	
@@ -75,21 +79,21 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 		
-		int duration = 1600/2;
+		int duration = randomNumber(1600/6,1600/2) ;
 		
 		//Hell
-		target.addPotionEffect(new PotionEffect(MobEffects.POISON, duration, 3) );
-		target.addPotionEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, duration, 1) );
-		target.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, duration, 5) );
-		target.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, duration, 2) );
-		target.addPotionEffect(new PotionEffect(MobEffects.HUNGER, duration, 5) );
-		target.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, duration, 2) );
-		target.addPotionEffect(new PotionEffect(MobEffects.WITHER, duration, 1) );
+		target.addPotionEffect(new PotionEffect(MobEffects.POISON, duration, randomNumber(1,5) ) );
+		target.addPotionEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, duration, randomNumber(1,5) ) );
+		target.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, duration, randomNumber(1,5) ) );
+		target.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, duration, randomNumber(1,5) ) );
+		target.addPotionEffect(new PotionEffect(MobEffects.HUNGER, duration, randomNumber(1,5) ) );
+		target.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, duration, randomNumber(1,5) ) );
+		target.addPotionEffect(new PotionEffect(MobEffects.WITHER, duration, randomNumber(1,5) ) );
 		//target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, duration, 1) );
-		target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, duration, 1) );
+		target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, duration, randomNumber(1,5) ) );
 		//Heaven
-		target.addPotionEffect(new PotionEffect(MobEffects.LUCK, duration, 1) );
-		target.addPotionEffect(new PotionEffect(MobEffects.HASTE, duration, 2) );
+		target.addPotionEffect(new PotionEffect(MobEffects.LUCK, duration, randomNumber(1,5) ) );
+		target.addPotionEffect(new PotionEffect(MobEffects.HASTE, duration, randomNumber(1,5) ) );
 		
 		return super.hitEntity(stack, target, attacker);
 	}
