@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.watershark9.dsjarmory.items.ItemBase;
+import com.watershark9.dsjarmory.items.armor.ArmorBase;
 import com.watershark9.dsjarmory.items.tools.CustomSword;
 import com.watershark9.dsjarmory.items.tools.ToolAxe;
 import com.watershark9.dsjarmory.items.tools.ToolHoe;
@@ -20,9 +21,13 @@ import com.watershark9.dsjarmory.items.tools.CustomTools.ada_shield;
 import com.watershark9.dsjarmory.items.tools.CustomTools.bane_of_seux;
 import com.watershark9.dsjarmory.items.tools.CustomTools.golden_fire;
 import com.watershark9.dsjarmory.items.tools.CustomTools.melodias;
+import com.watershark9.dsjarmory.util.Reference;
 
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
@@ -37,6 +42,7 @@ public class ModItems {
 	
 	//Materials:
 	public static final ToolMaterial MATERIAL_ORICHALCUM = EnumHelper.addToolMaterial("material_orichalcum", 4, 1561*2, 8*2, 4.0F, 10*2);
+	
 	
 	//Tools:
 	
@@ -73,9 +79,19 @@ public class ModItems {
 	//Equipment:
 	public static final ItemShield ADAMANT_SHIELD = new ada_shield("adamant_shield");
 	
+	// Armors: // name, textureName, Durability, ReductionAmounts, Enchantability, Sound, Toughness
+	
+	//Chronicle
+	public static final ArmorMaterial ARMOR_CHRONICLE = EnumHelper.addArmorMaterial("armor_chronicle", Reference.MOD_ID +":chronicle", 40, new int[] {5,10,8,5}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2.0F);
+	public static final Item CHRONICLE_HELMET = new ArmorBase("chronicle_sallet", ARMOR_CHRONICLE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item CHRONICLE_CHESTPLATE = new ArmorBase("chronicle_chestplate", ARMOR_CHRONICLE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item CHRONICLE_LEGGINGS = new ArmorBase("chronicle_leggins", ARMOR_CHRONICLE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item CHRONICLE_BOOTS = new ArmorBase("chronicle_boots", ARMOR_CHRONICLE, 1, EntityEquipmentSlot.FEET);
+	
+	
 	//Items:
 	public static final Item ORICHALCUM_INGOT = new ItemBase("orichalcum_ingot");
-	public static final Item ORICHALCUM_CRYSTAL = new ItemBase("orichalcum_crystal");
+	public static final Item ORICHALCUM_CRYSTAL = new ItemBase("orichalcum_crystal");	
 	
 	public static final Item BULLET = new ItemBase("bullet");
 	

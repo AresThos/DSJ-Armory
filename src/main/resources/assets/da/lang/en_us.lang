@@ -21,6 +21,12 @@ item.orichalcum_axe.name=Orichalcum Axe
 item.orichalcum_pickaxe.name=Orichalcum Pickaxe
 item.orichalcum_spade.name=Orichalcum Spade
 
+//Armors
+item.chronicle_sallet.name=Chronicle Sallet
+item.chronicle_chestplate.name=Chronicle Chestplate
+item.chronicle_leggins.name=Chronicle Greaves
+item.chronicle_boots.name=Chronicle Sabatons
+
 //Items
 item.orichalcum_ingot.name=Orichalcum Ingot
 item.orichalcum_crystal.name=Orichalcum Crystal

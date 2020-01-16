@@ -14,6 +14,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
@@ -80,7 +81,6 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 		
 		int duration = randomNumber(1600/6,1600/2) ;
-		
 		//Hell
 		target.addPotionEffect(new PotionEffect(MobEffects.POISON, duration, randomNumber(1,5) ) );
 		target.addPotionEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, duration, randomNumber(1,5) ) );
