@@ -45,7 +45,7 @@ public class TidalRift extends ItemSword implements IHasModel {
 	// Custom Stuff
 	
 	public static void riftSurf(EntityPlayer entity, World place) {
-		if ( (entity.isInWater() || place.isRaining()) && entity.getCooledAttackStrength(0) == 1){
+		if ( (entity.isInWater()  && entity.getCooledAttackStrength(0) == 1) ){
 			Vec3d lookaim = entity.getLookVec();
 			double speed = 1.50;
 			entity.setVelocity( (lookaim.x * speed), (lookaim.y * speed), (lookaim.z * speed));

@@ -14,6 +14,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.EnumCreatureAttribute;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
@@ -72,6 +74,38 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 		return rangeMin + (rangeMax - rangeMin) * r.nextInt();
 	}
 	
+	private void endlessSuffering(EntityLivingBase target) {
+		
+		int duration = randomNumber(1600/6,1600/2) ;
+		int effectLevel = 1;
+		
+		if ( target.getCreatureAttribute() != EnumCreatureAttribute.UNDEAD ) {
+			
+			//Hell
+			target.addPotionEffect(new PotionEffect(MobEffects.POISON, duration, effectLevel ) );
+			target.addPotionEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, 1, effectLevel ) );
+			target.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, duration, effectLevel ) );
+			target.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, duration, effectLevel ) );
+			target.addPotionEffect(new PotionEffect(MobEffects.HUNGER, duration, effectLevel ) );
+			target.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, duration, effectLevel ) );
+			target.addPotionEffect(new PotionEffect(MobEffects.WITHER, duration, effectLevel ) );
+			//target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, duration, 1) );
+			target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, duration, effectLevel ) );
+			//Heaven
+			target.addPotionEffect(new PotionEffect(MobEffects.LUCK, duration, randomNumber(effectLevel,3) ) );
+			target.addPotionEffect(new PotionEffect(MobEffects.HASTE, duration, randomNumber(effectLevel,3) ) );
+			
+		}
+		else { // Target is Undead
+			target.setFire(duration);
+			target.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 1, effectLevel ) );
+		}
+		
+		
+		
+		
+	}
+	
 	// Custom Calls
 	
 	
@@ -79,21 +113,7 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
 		
-		int duration = randomNumber(1600/6,1600/2) ;
-		
-		//Hell
-		target.addPotionEffect(new PotionEffect(MobEffects.POISON, duration, randomNumber(1,5) ) );
-		target.addPotionEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, duration, randomNumber(1,5) ) );
-		target.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, duration, randomNumber(1,5) ) );
-		target.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, duration, randomNumber(1,5) ) );
-		target.addPotionEffect(new PotionEffect(MobEffects.HUNGER, duration, randomNumber(1,5) ) );
-		target.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, duration, randomNumber(1,5) ) );
-		target.addPotionEffect(new PotionEffect(MobEffects.WITHER, duration, randomNumber(1,5) ) );
-		//target.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, duration, 1) );
-		target.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, duration, randomNumber(1,5) ) );
-		//Heaven
-		target.addPotionEffect(new PotionEffect(MobEffects.LUCK, duration, randomNumber(1,5) ) );
-		target.addPotionEffect(new PotionEffect(MobEffects.HASTE, duration, randomNumber(1,5) ) );
+		endlessSuffering(target);
 		
 		return super.hitEntity(stack, target, attacker);
 	}
