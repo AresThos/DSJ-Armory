@@ -234,14 +234,19 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"translation": [0, 6, -2.5]
+			"translation": [0, 6, -2.5],
+			"scale": [1.5, 1, 1]
 		},
 		"thirdperson_lefthand": {
 			"translation": [0, 6, -2.5]
 		},
 		"firstperson_righthand": {
-			"translation": [0, 6, -2.5],
-			"scale": [1.5, 1, 1]
+			"translation": [0, 9, -2.5],
+			"scale": [2.5, 1.5, 1.5]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 9, -2.5],
+			"scale": [2.5, 1.5, 1.5]
 		},
 		"ground": {
 			"translation": [0, 4.25, 0]
