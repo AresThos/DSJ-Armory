@@ -62,7 +62,6 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 		
 		ModItems.ITEMS.add(this);
 		
-		
 		setAttack(at);
 		setSpeed(sp); 
 	}
@@ -95,10 +94,11 @@ public class ChaosBegins extends ItemSword implements IHasModel {
 			target.addPotionEffect(new PotionEffect(MobEffects.LUCK, duration, randomNumber(effectLevel,3) ) );
 			target.addPotionEffect(new PotionEffect(MobEffects.HASTE, duration, randomNumber(effectLevel,3) ) );
 			
+			
 		}
 		else { // Target is Undead
 			target.setFire(duration);
-			target.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 1, effectLevel ) );
+			target.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 1, randomNumber(effectLevel, 10) ) );
 		}
 		
 		
