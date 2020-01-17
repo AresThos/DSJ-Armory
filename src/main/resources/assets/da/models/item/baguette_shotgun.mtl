@@ -1,8 +1,4 @@
 # Made in Blockbench 3.2.2
-newmtl 0
-map_Kd side1.png 
-newmtl 1
-map_Kd top.png 
 newmtl 2
 map_Kd bread_barrel.png 
 newmtl none
