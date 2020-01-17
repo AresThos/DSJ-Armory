@@ -69,18 +69,18 @@ public class ModItems {
 	
 	//DSJ
 	public static final ItemSword TIDAL_RIFT = new TidalRift("tidal_rift", MATERIAL_ORICHALCUM, damageFormula(13), speedFormula(9) ); // attack 13, speed 9
-	public static final ItemSword XENTAR = new Xentar("xentar", MATERIAL_ORICHALCUM, damageFormula(40), 1.5 ); // attack 40, speed 0.4
-	public static final ItemSword DEMON_BLADE = new JanembaSword("demon_blade", MATERIAL_ORICHALCUM, damageFormula(20), 1); // attack 20, speed 1.6
-	public static final ItemSword LION_EDGE = new LionEdge("lion_edge", MATERIAL_ORICHALCUM, damageFormula(10), 1.25); // attack 10, speed 1 (attack also is damage for arrow)
-	public static final ItemSword GOLDEN_FIRE = new golden_fire("golden_fire", MATERIAL_ORICHALCUM, damageFormula(1), damageFormula(8), 0.3 ); // attack random between 1 and 8, speed 3.2
-	public static final ItemSword CHAOS_BEGINS = new ChaosBegins("chaos_begins", MATERIAL_ORICHALCUM, damageFormula(3), 1.3 ); // attack 3, speed 1.6
-	public static final ItemSword BANEOFSEUX = new bane_of_seux("baneofseux", MATERIAL_ORICHALCUM, damageFormula(5), 1 ); // attack 5, speed 1.6
+	public static final ItemSword XENTAR = new Xentar("xentar", MATERIAL_ORICHALCUM, damageFormula(40), speedFormula(0.4) ); // attack 40, speed 0.4
+	public static final ItemSword DEMON_BLADE = new JanembaSword("demon_blade", MATERIAL_ORICHALCUM, damageFormula(20), speedFormula(1.6)); // attack 20, speed 1.6
+	public static final ItemSword LION_EDGE = new LionEdge("lion_edge", MATERIAL_ORICHALCUM, damageFormula(10), speedFormula(1)); // attack 10, speed 1 (attack also is damage for arrow)
+	public static final ItemSword GOLDEN_FIRE = new golden_fire("golden_fire", MATERIAL_ORICHALCUM, damageFormula(1), damageFormula(8), speedFormula(3.2) ); // attack random between 1 and 8, speed 3.2
+	public static final ItemSword CHAOS_BEGINS = new ChaosBegins("chaos_begins", MATERIAL_ORICHALCUM, damageFormula(3), speedFormula(1.6)); // attack 3, speed 1.6
+	public static final ItemSword BANEOFSEUX = new bane_of_seux("baneofseux", MATERIAL_ORICHALCUM, damageFormula(5), speedFormula(1.6) ); // attack 5, speed 1.6
 	public static final ItemSword BREAD_SHOTGUN = new breadshot("baguette_shotgun", MATERIAL_ORICHALCUM, damageFormula(1), 7, speedFormula(1.6/2)); // attack 5, speed 1.6
 	
 	//Extras
-	public static final ItemSword MELODIAS_RAPIER = new melodias("melodias_rapier", ToolMaterial.DIAMOND, damageFormula(5), 0.79 ); // attack 5, speed 2
-	public static final ItemSword PALADUS = new CustomSword("paladun_sword", ToolMaterial.GOLD, damageFormula(7), 1.25); // attack 7, speed 1
-	public static final ItemSword ANGELUS_FERRUM = new CustomSword("angelus_ferrum", MATERIAL_ORICHALCUM, damageFormula(17), 0.958333 ); // attack 17, speed 1.7
+	public static final ItemSword MELODIAS_RAPIER = new melodias("melodias_rapier", ToolMaterial.DIAMOND, damageFormula(5), speedFormula(2) ); // attack 5, speed 2
+	public static final ItemSword PALADUS = new CustomSword("paladun_sword", ToolMaterial.GOLD, damageFormula(7), speedFormula(1)); // attack 7, speed 1
+	public static final ItemSword ANGELUS_FERRUM = new CustomSword("angelus_ferrum", MATERIAL_ORICHALCUM, damageFormula(17), speedFormula(1.5) ); // attack 17, speed 1.7
 	//Equipment:
 	public static final ItemShield ADAMANT_SHIELD = new ada_shield("adamant_shield");
 	
