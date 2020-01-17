@@ -75,7 +75,7 @@ public class ModItems {
 	public static final ItemSword GOLDEN_FIRE = new golden_fire("golden_fire", MATERIAL_ORICHALCUM, damageFormula(1), damageFormula(8), 0.3 ); // attack random between 1 and 8, speed 3.2
 	public static final ItemSword CHAOS_BEGINS = new ChaosBegins("chaos_begins", MATERIAL_ORICHALCUM, damageFormula(3), 1.3 ); // attack 3, speed 1.6
 	public static final ItemSword BANEOFSEUX = new bane_of_seux("baneofseux", MATERIAL_ORICHALCUM, damageFormula(5), 1 ); // attack 5, speed 1.6
-	public static final ItemSword BREAD_SHOTGUN = new breadshot("baguette_shotgun", MATERIAL_ORICHALCUM, damageFormula(5), speedFormula(1.6/2)); // attack 5, speed 1.6
+	public static final ItemSword BREAD_SHOTGUN = new breadshot("baguette_shotgun", MATERIAL_ORICHALCUM, damageFormula(1), 7, speedFormula(1.6/2)); // attack 5, speed 1.6
 	
 	//Extras
 	public static final ItemSword MELODIAS_RAPIER = new melodias("melodias_rapier", ToolMaterial.DIAMOND, damageFormula(5), 0.79 ); // attack 5, speed 2

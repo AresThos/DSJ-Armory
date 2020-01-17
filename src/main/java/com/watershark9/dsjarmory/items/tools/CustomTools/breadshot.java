@@ -28,9 +28,9 @@ import net.minecraft.world.World;
 
 public class breadshot extends ItemSword implements IHasModel {
 	
-	double attack,speed;
+	double attack,speed,bulletdamage;
 	
-	public breadshot(String name, ToolMaterial material, double at, double sp) {
+	public breadshot(String name, ToolMaterial material, double at,double bull, double sp) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
@@ -40,6 +40,7 @@ public class breadshot extends ItemSword implements IHasModel {
 		
 		attack = at;
 		speed = sp;
+		bulletdamage = bull;
 	}
 
 	
@@ -59,8 +60,7 @@ public class breadshot extends ItemSword implements IHasModel {
 		fireb.motionX = lookaim.x * accelaim + randomNumber( (unaccuracy * -1), unaccuracy);
 		fireb.motionY = lookaim.y * accelaim + randomNumber( (unaccuracy * -1), unaccuracy);
 		fireb.motionZ = lookaim.z * accelaim + randomNumber( (unaccuracy * -1), unaccuracy);
-		
-		fireb.setDamage(attack);
+		fireb.setDamage(bulletdamage);
 		fireb.setKnockbackStrength(knockback);
 		world.spawnEntity(fireb);
 		
