@@ -35,3 +35,5 @@ item.orichalcum_crystal.name=Orichalcum Crystal
 //Blocks
 tile.orichalcum_block.name=Block of Orichalcum
 tile.orichalcum_ore.name=Orichalcum Ore
+//Creative Tabs
+itemGroup.dsj_armory=D.S.J. Armory
