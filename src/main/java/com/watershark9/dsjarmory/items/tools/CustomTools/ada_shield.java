@@ -25,7 +25,7 @@ public class ada_shield extends ItemShield implements IHasModel {
 		super();
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(CreativeTabs.COMBAT);
+		setCreativeTab(ModItems.DSJ_TAB);;
 		
 		ModItems.ITEMS.add(this);
 		

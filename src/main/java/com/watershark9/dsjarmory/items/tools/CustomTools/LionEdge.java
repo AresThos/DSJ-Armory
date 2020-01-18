@@ -49,7 +49,7 @@ public class LionEdge extends ItemSword implements IHasModel {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(CreativeTabs.COMBAT);
+		setCreativeTab(ModItems.DSJ_TAB);
 		
 		ModItems.ITEMS.add(this);
 		
