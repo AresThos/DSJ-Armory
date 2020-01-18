@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.watershark9.dsjarmory.items.ItemBase;
 import com.watershark9.dsjarmory.items.armor.ArmorBase;
+import com.watershark9.dsjarmory.items.tabs.DSJArmoryCreativeTab;
 import com.watershark9.dsjarmory.items.tools.CustomSword;
 import com.watershark9.dsjarmory.items.tools.ToolAxe;
 import com.watershark9.dsjarmory.items.tools.ToolHoe;
@@ -24,6 +25,7 @@ import com.watershark9.dsjarmory.items.tools.CustomTools.golden_fire;
 import com.watershark9.dsjarmory.items.tools.CustomTools.melodias;
 import com.watershark9.dsjarmory.util.Reference;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -38,6 +40,8 @@ import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ModItems {
+	
+	public static final CreativeTabs DSJ_TAB = new DSJArmoryCreativeTab("dsj_armory");
 
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
