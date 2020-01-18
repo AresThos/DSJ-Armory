@@ -135,9 +135,6 @@ public class golden_fire extends ItemSword implements IHasModel {
 		if( isDualWielding( player ) ) {
 			buff(player,1,3);
 		}
-		else {
-			removebuff(player);
-		}
 		
 		super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
 	} 
