@@ -64,14 +64,17 @@ public class breadshot extends ItemSword implements IHasModel {
 		fireb.setKnockbackStrength(knockback);
 		world.spawnEntity(fireb);
 		
+		
+		
 	}
 	
 	private void shooting(World world, EntityPlayer play) {
 		
 		if ( play.getCooledAttackStrength(0) == 1 ) {
-			shoot(world, play, 1.5D, randomNumber(0.75, 10), 4, 0.5);
-			shoot(world, play, 1.5D, randomNumber(0.75, 10), 4, 0.5);
+			shoot(world, play, 1.5D, randomNumber(2, 10), 4, 0.5);
+			shoot(world, play, 1.5D, randomNumber(2, 10), 4, 0.5);
 			play.resetCooldown();
+			
 		}
 		
 	}
