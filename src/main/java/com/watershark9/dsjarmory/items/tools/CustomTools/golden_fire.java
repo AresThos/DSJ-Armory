@@ -79,13 +79,10 @@ public class golden_fire extends ItemSword implements IHasModel {
 	
 	private void buff(EntityLivingBase play, int duration, int boost) {
 		if ( isDualWielding(play) ) {
-			//duration = 1600; boost = 3;
 			
 			play.addPotionEffect(new PotionEffect(MobEffects.SPEED, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, duration, boost));
 			play.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, duration, boost));
-			
-			play.swingArm( play.getActiveHand().OFF_HAND );
 		}
 	}
 	private void fireAttack(EntityLivingBase target, int secondsOnFire) {
@@ -110,28 +107,43 @@ public class golden_fire extends ItemSword implements IHasModel {
 		
 	}
 	
-	// Custom Calls
-	
 	/*
-	@Override
-	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
-		// TODO Auto-generated method stub
-		EntityPlayer player = Minecraft.getMinecraft().player;
-		if(isDualWielding( player ) && !isBuffActive( player ) ) {
-			buff(player,1600,3);
+	private boolean hasRightItem(EntityLivingBase entity) {
+		String item = this.getUnlocalizedName();
+		String hand = entity.getHeldItemMainhand().getUnlocalizedName();
+		
+		System.out.println(item);
+		System.out.println(hand);
+		
+		if ( item == hand ) {
+			Minecraft.getMinecraft().player.sendMessage( new TextComponentString( "has item" ) );
+			return true;
 		}
 		else {
-			removebuff(player);
+			return false;
+		}
+	} */
+	
+	// Custom Calls
+	
+	
+	@Override
+	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+		
+		EntityLivingBase player = (EntityLivingBase)entityIn;
+		
+		if( isDualWielding( player ) ) {
+			buff(player,1,3);
 		}
 		
 		super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
-	} */
+	} 
 	
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+		
 		attack = randomNumber(mini,maxi);
 		fireAttack( target,2 );
-		buff(attacker,1600,3);
 		
 		return super.hitEntity(stack, target, attacker);
 	}
