@@ -26,6 +26,7 @@ import com.watershark9.dsjarmory.items.tools.CustomTools.melodias;
 import com.watershark9.dsjarmory.util.Reference;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.projectile.EntityTippedArrow;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -66,8 +67,8 @@ public class ModItems {
 	 public static final ItemSword NAME_IN_ALL_CAPS = new CustomSword("custom_sword", MATERIAL, damage_formula_result, speed_formula_result ); // attack intended, speed intended
 	 */
 	
-	private static double damageFormula(double y) { return (y-1)/7; }
-	private static double speedFormula(double x) { return -((x-4)/2.4); }
+	public static double damageFormula(double y) { return (y-1)/7; }
+	public static double speedFormula(double x) { return -((x-4)/2.4); }
 	
 	//Exotic:
 	
@@ -85,6 +86,7 @@ public class ModItems {
 	public static final ItemSword MELODIAS_RAPIER = new melodias("melodias_rapier", ToolMaterial.DIAMOND, damageFormula(5), speedFormula(2) ); // attack 5, speed 2
 	public static final ItemSword PALADUS = new CustomSword("paladun_sword", ToolMaterial.GOLD, damageFormula(7), speedFormula(1)); // attack 7, speed 1
 	public static final ItemSword ANGELUS_FERRUM = new CustomSword("angelus_ferrum", MATERIAL_ORICHALCUM, damageFormula(17), speedFormula(1.5) ); // attack 17, speed 1.7
+	
 	//Equipment:
 	public static final ItemShield ADAMANT_SHIELD = new ada_shield("adamant_shield");
 	
@@ -103,6 +105,5 @@ public class ModItems {
 	public static final Item ORICHALCUM_CRYSTAL = new ItemBase("orichalcum_crystal");	
 	
 	public static final Item BULLET = new ItemBase("bullet");
-	
 	
 }

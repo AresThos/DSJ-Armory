@@ -7,6 +7,7 @@ import java.util.UUID;
 import com.google.common.collect.Multimap;
 import com.watershark9.dsjarmory.Main;
 import com.watershark9.dsjarmory.init.ModItems;
+import com.watershark9.dsjarmory.items.Bullet_Entity;
 import com.watershark9.dsjarmory.util.IHasModel;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -66,23 +67,17 @@ public class LionEdge extends ItemSword implements IHasModel {
 			play.resetCooldown();
 			
 			Vec3d lookaim = play.getLookVec();
-			EntityTippedArrow fireb = new EntityTippedArrow(world); 
-
+			EntityTippedArrow fireb = new Bullet_Entity(world, attack );
+			
 			double multiplyaim = 1.5D;
 			double accelaim = 4;
-			int knockback = 10;
 
 			fireb.setPosition( (play.posX + lookaim.x * multiplyaim), ( (play.posY + 1) + lookaim.y * multiplyaim), (play.posZ + lookaim.z * multiplyaim) );
 			fireb.motionX = lookaim.x * accelaim;
 			fireb.motionY = lookaim.y * accelaim;
 			fireb.motionZ = lookaim.z * accelaim;
 			
-			fireb.setDamage(attack);
-			fireb.setKnockbackStrength(knockback);
 			
-			
-			
-			world.spawnEntity(fireb);
 			world.spawnEntity(fireb);
 			
 			
