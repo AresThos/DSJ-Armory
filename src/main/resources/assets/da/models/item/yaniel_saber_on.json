@@ -2,6 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "da:models/weapons/yaniels_saber",
+		"1": "da:models/weapons/beam",
 		"particle": "da:models/weapons/yaniels_saber"
 	},
 	"elements": [
@@ -27,6 +28,18 @@
 				"west": {"uv": [1, 1.5, 1.9, 2.3], "texture": "#0"},
 				"up": {"uv": [0, 1.5, 1, 1.9], "texture": "#0"},
 				"down": {"uv": [1, 2, 2, 2.9], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7.5, 9, 7.5],
+			"to": [8.5, 32, 8.5],
+			"faces": {
+				"north": {"uv": [6, 0, 11, 16], "texture": "#1"},
+				"east": {"uv": [6, 0, 11, 16], "texture": "#1"},
+				"south": {"uv": [6, 0, 11, 16], "texture": "#1"},
+				"west": {"uv": [6, 0, 11, 16], "texture": "#1"},
+				"up": {"uv": [0, 1, 5, 6], "texture": "#1"},
+				"down": {"uv": [0, 0, 1, 1], "texture": "#1"}
 			}
 		}
 	],
