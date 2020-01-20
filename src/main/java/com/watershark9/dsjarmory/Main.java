@@ -1,9 +1,13 @@
 package com.watershark9.dsjarmory;
 
+import com.watershark9.dsjarmory.init.ModFluids;
 import com.watershark9.dsjarmory.proxy.CommonProxy;
 import com.watershark9.dsjarmory.util.Reference;
+import com.watershark9.dsjarmory.util.handlers.RegistryHandler;
+import com.watershark9.dsjarmory.util.handlers.RenderHandler;
 import com.watershark9.dsjarmory.world.ModWorldGen;
 
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -22,8 +26,11 @@ public class Main {
 	@SidedProxy(clientSide =Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
+	static { FluidRegistry.enableUniversalBucket(); }
+	
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
+		RegistryHandler.preInitRegistries(event);
 		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
 	}
 	@EventHandler

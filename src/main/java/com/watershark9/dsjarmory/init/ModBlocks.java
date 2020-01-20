@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.watershark9.dsjarmory.blocks.StandardCubeBlock;
+import com.watershark9.dsjarmory.blocks.BlockFluid;
 import com.watershark9.dsjarmory.blocks.CustomShapeBlock;
 import com.watershark9.dsjarmory.blocks.OrichalcumBlock;
 import com.watershark9.dsjarmory.blocks.OrichalcumOre;
@@ -21,5 +22,8 @@ public class ModBlocks {
 	//Utility Blocks
 	public static final Block GLASS_FURNACE = new StandardCubeBlock("glass_furnace", Material.ROCK);
 	public static final Block EXOTIC_WORKBENCH = new CustomShapeBlock("exotic_workbench_table", Material.WOOD);
+	
+	//Fluids
+	public static final Block MOLTEN_ORICHALCUM_BLOCK = new BlockFluid("molten_orichalcum", ModFluids.MOLTEN_ORICHALCUM, Material.LAVA);
 	
 }

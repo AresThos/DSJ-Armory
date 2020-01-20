@@ -1,6 +1,7 @@
 package com.watershark9.dsjarmory.util.handlers;
 
 import com.watershark9.dsjarmory.init.ModBlocks;
+import com.watershark9.dsjarmory.init.ModFluids;
 import com.watershark9.dsjarmory.init.ModItems;
 import com.watershark9.dsjarmory.util.IHasModel;
 
@@ -9,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber
@@ -36,5 +38,10 @@ public class RegistryHandler {
 				( (IHasModel)block ).registerModels();
 			}
 		}
+	}
+	
+	public static void preInitRegistries(FMLPreInitializationEvent event) {
+		ModFluids.registerFluids();
+		RenderHandler.registerCustomMeshesandStates();
 	}
 }
