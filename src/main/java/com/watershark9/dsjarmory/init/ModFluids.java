@@ -8,7 +8,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 public class ModFluids {
 
-	public static final Fluid MOLTEN_ORICHALCUM = new FluidLiquid("molten_orichalcum", new ResourceLocation(""), new ResourceLocation("") );
+	public static final Fluid MOLTEN_ORICHALCUM = new FluidLiquid("molten_orichalcum", new ResourceLocation("da:blocks/molten_orichalcum_still"), new ResourceLocation("da:blocks/molten_orichalcum_flow") );
 	
 	public static void registerFluids() {
 		registerFluid(MOLTEN_ORICHALCUM);
