@@ -4,6 +4,7 @@ import com.watershark9.dsjarmory.init.ModBlocks;
 import com.watershark9.dsjarmory.init.ModFluids;
 import com.watershark9.dsjarmory.init.ModItems;
 import com.watershark9.dsjarmory.util.IHasModel;
+import com.watershark9.dsjarmory.world.ModWorldGen;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -12,6 +13,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler {
@@ -41,7 +43,8 @@ public class RegistryHandler {
 	}
 	
 	public static void preInitRegistries(FMLPreInitializationEvent event) {
-		ModFluids.registerFluids();
-		RenderHandler.registerCustomMeshesandStates();
+		ModFluids.registerFluids(); // must register before blocks
+		RenderHandler.registerCustomMeshesAndStates();
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
 	}
 }

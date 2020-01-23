@@ -31,7 +31,7 @@ public class Main {
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event) {
 		RegistryHandler.preInitRegistries(event);
-		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
+		
 	}
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
